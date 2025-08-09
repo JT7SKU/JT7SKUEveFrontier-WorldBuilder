@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting" Version="9.4.0" />
+    <PackageReference Include="Aspire.Hosting.Docker" Version="9.3.0-preview.1.25265.20" />
+    <PackageReference Include="Aspire.Hosting.Orchestration.linux-x64" Version="9.4.0" />
+    <PackageReference Include="Nethereum.RPC.Extensions" Version="5.0.0" />
+    <PackageReference Include="Nethereum.Web3" Version="5.0.0" />
+    <PackageReference Include="Aspire.Hosting.NodeJs" Version="9.4.0" />
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.NodeJS.Extensions" Version="9.6.0" />
+  </ItemGroup>
+  
+</Project>
