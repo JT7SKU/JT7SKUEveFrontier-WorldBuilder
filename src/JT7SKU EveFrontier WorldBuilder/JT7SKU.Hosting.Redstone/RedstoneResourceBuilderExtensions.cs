@@ -10,12 +10,24 @@ namespace Aspire.Hosting
 {
     public static class RedstoneResourceBuilderExtensions
     {
-        public static IResourceBuilder<RedstoneResource> AddOPRedstone(
+        public static IResourceBuilder<RedstoneResource> AddOPGeth(
             this IDistributedApplicationBuilder builder, string name)
         {
             var resource = new RedstoneResource(name);
 
-            return builder.AddResource(resource);
+            return builder.AddResource(resource)
+                .WithImage(RedstoneContainerImageTags.OPGethImage)
+                .WithImageRegistry(RedstoneContainerImageTags.Registry)
+                .WithImageTag(RedstoneContainerImageTags.OPGethTag);
+        }
+        public static IResourceBuilder<RedstoneResource>AddOPNode(
+            this IDistributedApplicationBuilder builder, string name)
+        {
+            var resource = new RedstoneResource(name);
+            return builder.AddResource(resource)
+                .WithImageRegistry(RedstoneContainerImageTags.Registry)
+                .WithImage(RedstoneContainerImageTags.OpNodeImage)
+                .WithImageTag(RedstoneContainerImageTags.OPNodeTag);
         }
     }
 
