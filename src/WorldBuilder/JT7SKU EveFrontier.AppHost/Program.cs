@@ -57,7 +57,9 @@ internal class Program
             .WithImage(foundryImg).WithImageTag("latest")
             .WithVolume("frontier", "/root/.foundry/bin")
             .WithEndpoint("http", e=> e.TargetHost = "0.0.0.0")
-            .WithHttpEndpoint(name:"rpc",port:8546,targetPort: 8546, isProxied: false)
+            .WithEndpoint(scheme: "http", port: 5645, name: "internal" )
+            .WithEndpoint(scheme: "http", port: 8546, name: "anvil", isExternal: true)
+            .WithHttpEndpoint(name:"rpc",port:8546,targetPort: 8546,)
                 .WithEntrypoint("anvil") // if still works use "/bin/sh"
                 .WithEnvironment(" --block-time", "1")
                 .WithEnvironment("--block-base-fee-per-gas", "0")
