@@ -100,6 +100,16 @@ internal class Program
         // You can also retrieve the world abis and save them to the root directory from the deployment by running:
         //var abis = worldDeployer.WithDockerfile("/monorepo/abis");
         #endregion
+
+        #region Redstone (MainNet)
+        // For mainnet setup
+
+        #endregion
+
+        #region Pyrope (testnet)
+        // This is for frontier code now
+
+        #endregion
         // frontEnd with pnpm if set 
         //builder.AddPnpmApp("eve-frontier", workingDirectory: "/Dapp").WaitFor(worldDeployer);
 
