@@ -37,8 +37,9 @@ internal class Program
         string EnvfilePath = Path.Combine(root, "world.env");
         //var konttifilu = "world-deployer:/monorepo/abis";
         #region enviroments
-        var dockercompose = builder.AddDockerComposeEnvironment("hardhat-env");
-        dockercompose.ConfigureComposeFile(file =>
+        // HArdHat
+        var Hardhatenv = builder.AddDockerComposeEnvironment("hardhat-env");
+        Hardhatenv.ConfigureComposeFile(file =>
         {
             file.Name = "frontier-world-builder";
         });
