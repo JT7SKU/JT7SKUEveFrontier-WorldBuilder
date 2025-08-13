@@ -47,11 +47,17 @@ internal class Program
         //    file.Name = "frontier-world-builder";
         //});
         //var web3 = new Web3( $"{foundry.GetEndpoint("http")}");
-        #region Hardhat 
-
+        #region EF Indexer
         var pg = builder.AddPostgres("pg")
             .WithPgWeb();
-        var pgdb = pg.AddDatabase("pgdb");
+        var hardhatDB = pg.AddDatabase("hardhatdb");
+        var pyropeDB = pg.AddDatabase("pyropedb");
+        var worldapi = builder.AddExternalService("world-api", "https://world-api-stillness.live.tech.evefrontier.com");
+        var pyropeIndexer = builder.AddExternalService("Pyrope-indexer", "https://pyrope-external-sync-node-rpc.live.tech.evefrontier.com");
+
+        #endregion
+
+        #region Hardhat 
 
         var foundry = builder.AddContainer(name:"foundry", "ghcr.io/foundry-rs/foundry")
             .WithImage(foundryImg).WithImageTag("latest")
@@ -59,7 +65,7 @@ internal class Program
             .WithEndpoint("http", e=> e.TargetHost = "0.0.0.0")
             .WithEndpoint(scheme: "http", port: 5645, name: "internal" )
             .WithEndpoint(scheme: "http", port: 8546, name: "anvil", isExternal: true)
-            .WithHttpEndpoint(name:"rpc",port:8546,targetPort: 8546,)
+            .WithHttpEndpoint(name:"rpc",port:8546,targetPort: 8546)
                 .WithEntrypoint("anvil") // if still works use "/bin/sh"
                 .WithEnvironment(" --block-time", "1")
                 .WithEnvironment("--block-base-fee-per-gas", "0")
@@ -69,6 +75,7 @@ internal class Program
                 .WithHealthCheck("FoundryCheck")
                 .WithExternalHttpEndpoints()
                 .WithLifetime(ContainerLifetime.Persistent);
+
         var localUrl = foundry.GetEndpoint("http");
         var hardhat = new Web3(localUrl.ToString());
         
