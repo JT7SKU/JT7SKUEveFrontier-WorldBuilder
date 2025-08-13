@@ -36,17 +36,14 @@ internal class Program
         var root = Directory.GetCurrentDirectory();
         string EnvfilePath = Path.Combine(root, "world.env");
         //var konttifilu = "world-deployer:/monorepo/abis";
-        var dockercompose = builder.AddDockerComposeEnvironment("env");
+        #region enviroments
+        var dockercompose = builder.AddDockerComposeEnvironment("hardhat-env");
         dockercompose.ConfigureComposeFile(file =>
         {
             file.Name = "frontier-world-builder";
         });
-
-        //dockercompose.WithDashboard(db => db.WithHostPort(8035)).ConfigureComposefile(file=>
-        //{
-        //    file.Name = "frontier-world-builder";
-        //});
-        //var web3 = new Web3( $"{foundry.GetEndpoint("http")}");
+        #endregion
+        
         #region EF Indexer
         var pg = builder.AddPostgres("pg")
             .WithPgWeb();
