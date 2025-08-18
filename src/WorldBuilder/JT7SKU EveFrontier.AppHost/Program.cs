@@ -43,6 +43,12 @@ internal class Program
         {
             file.Name = "frontier-world-builder";
         });
+
+        var EFIndexer = builder.AddDockerComposeEnvironment("inxdexer-env");
+        EFIndexer.ConfigureComposeFile(file =>
+        {
+            file.Name = "Frontier-indexer";
+        });
         #endregion
         
         #region EF Indexer
@@ -104,6 +110,8 @@ internal class Program
         // get abis after world-deployer have done it work for 
         // You can also retrieve the world abis and save them to the root directory from the deployment by running:
         //var abis = worldDeployer.WithDockerfile("/monorepo/abis");
+        //foundry.WithComputeEnvironment(computeEnvironmentResource:Hardhatenv);
+        //worldDeployer.WithComputeEnvironment(Hardhatenv);
         #endregion
 
         #region Redstone (MainNet)
