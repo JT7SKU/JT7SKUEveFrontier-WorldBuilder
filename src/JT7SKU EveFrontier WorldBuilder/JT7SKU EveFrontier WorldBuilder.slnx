@@ -4,6 +4,8 @@
     <Project Path="../WorldBuilder/EveFrontierWorld.Hosting/JT7SKU.Hosting.EveFrontierEVEWorld.csproj" />
     <Project Path="JT7SKU.Hosting.Redstone/JT7SKU.Hosting.Redstone.csproj" Id="da202f4a-0246-4875-8dd8-c589ef02ab6a" />
   </Folder>
+  <Project Path="../JT7SKU.EveFrontier.Indexer/JT7SKU.EveFrontier.Indexer.AppHost/JT7SKU.EveFrontier.Indexer.AppHost.csproj" Id="28834d37-a25c-4822-8540-5164a022afcf" />
+  <Project Path="../JT7SKU.EveFrontier.Indexer/JT7SKU.EveFrontier.Indexer.ServiceDefaults/JT7SKU.EveFrontier.Indexer.ServiceDefaults.csproj" />
   <Project Path="../WorldBuilder/JT7SKU EveFrontier.AppHost/JT7SKU EveFrontier.LocalWorld.AppHost.csproj" />
   <Project Path="../WorldBuilder/JT7SKU EveFrontier.ServiceDefaults/JT7SKU EveFrontier.World.ServiceDefaults.csproj" />
 </Solution>
