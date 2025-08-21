@@ -8,4 +8,6 @@
   <Project Path="../JT7SKU.EveFrontier.Indexer/JT7SKU.EveFrontier.Indexer.ServiceDefaults/JT7SKU.EveFrontier.Indexer.ServiceDefaults.csproj" />
   <Project Path="../WorldBuilder/JT7SKU EveFrontier.AppHost/JT7SKU EveFrontier.LocalWorld.AppHost.csproj" />
   <Project Path="../WorldBuilder/JT7SKU EveFrontier.ServiceDefaults/JT7SKU EveFrontier.World.ServiceDefaults.csproj" />
+  <Project Path="JT7SKU.EveFrontier.PyropeWorld/JT7SKU.EveFrontier.PyropeWorld.AppHost/JT7SKU.EveFrontier.PyropeWorld.AppHost.csproj" Id="622feb7c-33fc-42d1-98de-450eabd31e9f" />
+  <Project Path="JT7SKU.EveFrontier.PyropeWorld/JT7SKU.EveFrontier.PyropeWorld.ServiceDefaults/JT7SKU.EveFrontier.PyropeWorld.ServiceDefaults.csproj" />
 </Solution>
