@@ -5,7 +5,7 @@ internal class Apphost
         var builder = DistributedApplication.CreateBuilder(args);
 
         // This include Indexers 
-        var stillnessWorldaddress = "0x42abe708fe7a003769d77cca42affb9a8feb44db";
+        var stillnessWorldaddress = "0x7085f3e652987f656fb8dee5aa6592197bb75de8 ";
         var EFIndexer = builder.AddDockerComposeEnvironment("inxdexer-env");
         EFIndexer.ConfigureComposeFile(file =>
         {
