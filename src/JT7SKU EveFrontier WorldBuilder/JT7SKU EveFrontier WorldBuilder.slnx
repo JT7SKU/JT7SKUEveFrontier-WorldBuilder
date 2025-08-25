@@ -1,13 +1,27 @@
 <Solution>
-  <Folder Name="/Integrations/">
+  <Folder Name="/Aspire/" />
+  <Folder Name="/Aspire/DevNet/">
+    <Project Path="../WorldBuilder/JT7SKU EveFrontier.AppHost/JT7SKU EveFrontier.LocalWorld.AppHost.csproj" />
+    <Project Path="../WorldBuilder/JT7SKU EveFrontier.ServiceDefaults/JT7SKU EveFrontier.World.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Aspire/Indexer/">
+    <Project Path="../JT7SKU.EveFrontier.Indexer/JT7SKU.EveFrontier.Indexer.AppHost/JT7SKU.EveFrontier.Indexer.AppHost.csproj" Id="28834d37-a25c-4822-8540-5164a022afcf" />
+    <Project Path="../JT7SKU.EveFrontier.Indexer/JT7SKU.EveFrontier.Indexer.ServiceDefaults/JT7SKU.EveFrontier.Indexer.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Aspire/Integrations/">
     <Project Path="../WorldBuilder/EveFrontierFountry.Hosting/JT7SKU.Hosting.Foundry.csproj" />
     <Project Path="../WorldBuilder/EveFrontierWorld.Hosting/JT7SKU.Hosting.EveFrontierEVEWorld.csproj" />
     <Project Path="JT7SKU.Hosting.Redstone/JT7SKU.Hosting.Redstone.csproj" Id="da202f4a-0246-4875-8dd8-c589ef02ab6a" />
   </Folder>
-  <Project Path="../JT7SKU.EveFrontier.Indexer/JT7SKU.EveFrontier.Indexer.AppHost/JT7SKU.EveFrontier.Indexer.AppHost.csproj" Id="28834d37-a25c-4822-8540-5164a022afcf" />
-  <Project Path="../JT7SKU.EveFrontier.Indexer/JT7SKU.EveFrontier.Indexer.ServiceDefaults/JT7SKU.EveFrontier.Indexer.ServiceDefaults.csproj" />
-  <Project Path="../WorldBuilder/JT7SKU EveFrontier.AppHost/JT7SKU EveFrontier.LocalWorld.AppHost.csproj" />
-  <Project Path="../WorldBuilder/JT7SKU EveFrontier.ServiceDefaults/JT7SKU EveFrontier.World.ServiceDefaults.csproj" />
-  <Project Path="JT7SKU.EveFrontier.PyropeWorld/JT7SKU.EveFrontier.PyropeWorld.AppHost/JT7SKU.EveFrontier.PyropeWorld.AppHost.csproj" Id="622feb7c-33fc-42d1-98de-450eabd31e9f" />
-  <Project Path="JT7SKU.EveFrontier.PyropeWorld/JT7SKU.EveFrontier.PyropeWorld.ServiceDefaults/JT7SKU.EveFrontier.PyropeWorld.ServiceDefaults.csproj" />
+  <Folder Name="/Aspire/MainNet/">
+    <Project Path="JT7SKU.EveFrontier.RedstoneWorld/JT7SKU.EveFrontier.RedstoneWorld.AppHost/JT7SKU.EveFrontier.RedstoneWorld.AppHost.csproj" Id="e715c3a5-91f9-46fb-a87f-25f0ecc90f06" />
+    <Project Path="JT7SKU.EveFrontier.RedstoneWorld/JT7SKU.EveFrontier.RedstoneWorld.ServiceDefaults/JT7SKU.EveFrontier.RedstoneWorld.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Aspire/TestNet/">
+    <Project Path="JT7SKU.EveFrontier.PyropeWorld/JT7SKU.EveFrontier.PyropeWorld.AppHost/JT7SKU.EveFrontier.PyropeWorld.AppHost.csproj" Id="622feb7c-33fc-42d1-98de-450eabd31e9f" />
+    <Project Path="JT7SKU.EveFrontier.PyropeWorld/JT7SKU.EveFrontier.PyropeWorld.ServiceDefaults/JT7SKU.EveFrontier.PyropeWorld.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Pipelines/">
+    <Project Path="../Pipelines/JT7SKU.Hosting.Docker.Pipelines/JT7SKU.Hosting.Docker.Pipelines.csproj" Id="3ea4484d-75bf-49f3-b5f1-2e76d198a1c3" />
+  </Folder>
 </Solution>
