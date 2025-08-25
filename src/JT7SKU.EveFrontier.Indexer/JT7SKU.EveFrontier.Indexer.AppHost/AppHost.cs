@@ -6,7 +6,7 @@ internal class Apphost
 
         // This include Indexers 
         var stillnessWorldaddress = "0x7085f3e652987f656fb8dee5aa6592197bb75de8 ";
-        var EFIndexer = builder.AddDockerComposeEnvironment("inxdexer-env");
+        var EFIndexer = builder.AddDockerComposeEnvironment("inxdexer-env").WithDashboard(dash => dash.WithHostPort(8085));
         EFIndexer.ConfigureComposeFile(file =>
         {
             file.Name = "Frontier-indexer";
