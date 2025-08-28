@@ -44,20 +44,13 @@ internal class Program
             file.Name = "frontier-world-builder";
         });
 
-        var EFIndexer = builder.AddDockerComposeEnvironment("inxdexer-env");
-        EFIndexer.ConfigureComposeFile(file =>
-        {
-            file.Name = "Frontier-indexer";
-        });
         #endregion
         
         #region EF Indexer
         var pg = builder.AddPostgres("pg")
             .WithPgWeb();
         var hardhatDB = pg.AddDatabase("hardhatdb");
-        var pyropeDB = pg.AddDatabase("pyropedb");
-        var worldapi = builder.AddExternalService("world-api", "https://world-api-stillness.live.tech.evefrontier.com");
-        var pyropeIndexer = builder.AddExternalService("Pyrope-indexer", "https://pyrope-external-sync-node-rpc.live.tech.evefrontier.com");
+        // Datasource use for indexer 
 
         #endregion
 
@@ -114,15 +107,10 @@ internal class Program
         //worldDeployer.WithComputeEnvironment(Hardhatenv);
         #endregion
 
-        #region Redstone (MainNet)
-        // For mainnet setup
+      
 
-        #endregion
+       
 
-        #region Pyrope (testnet)
-        // This is for frontier code now
-
-        #endregion
         // frontEnd with pnpm if set 
         //builder.AddPnpmApp("eve-frontier", workingDirectory: "/Dapp").WaitFor(worldDeployer);
 
