@@ -115,8 +115,8 @@ internal class Program
         #region proxy 
         //var gateway = builder.AddYarp("gateway").WithConfiguration(yarp =>
         //{
-        //    yarp.AddRoute(foundry).WithMatchHosts("foundry.localhost");
-        //    yarp.AddRoute(worldDeployer).WithMatchHosts("deployer.localhost");
+        //    yarp.AddRoute("/foundry/",foundry);
+        //    yarp.AddRoute("/deployer/",worldDeployer);
         //});
         #endregion
 
