@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Nethereum.Web3;
 using Nethereum.Model;
 using Microsoft.AspNetCore.Routing.Matching;
+using Aspire.Hosting.Yarp;
 
 internal class Program
 {
@@ -43,10 +44,11 @@ internal class Program
         {
             file.Name = "frontier-world-builder";
         });
+       
 
         #endregion
         
-        #region EF Indexer
+        #region EF Indexer Local
         var pg = builder.AddPostgres("pg")
             .WithPgWeb();
         var hardhatDB = pg.AddDatabase("hardhatdb");
@@ -105,11 +107,20 @@ internal class Program
         //var abis = worldDeployer.WithDockerfile("/monorepo/abis");
         //foundry.WithComputeEnvironment(computeEnvironmentResource:Hardhatenv);
         //worldDeployer.WithComputeEnvironment(Hardhatenv);
+
+
+
         #endregion
 
-      
+        #region proxy 
+        //var gateway = builder.AddYarp("gateway").WithConfiguration(yarp =>
+        //{
+        //    yarp.AddRoute(foundry).WithMatchHosts("foundry.localhost");
+        //    yarp.AddRoute(worldDeployer).WithMatchHosts("deployer.localhost");
+        //});
+        #endregion
 
-       
+
 
         // frontEnd with pnpm if set 
         //builder.AddPnpmApp("eve-frontier", workingDirectory: "/Dapp").WaitFor(worldDeployer);
